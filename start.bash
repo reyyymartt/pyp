@@ -2,5 +2,5 @@
 
 
 echo "Installing Packages"
-echo 'pip install phonenumbers'
+echo pip install phonenumbers
 
