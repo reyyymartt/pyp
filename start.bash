@@ -1,5 +1,6 @@
 
 
 
-echo "Hello world"
-echo "Hello there"
+echo "Installing Packages"
+echo 'pip install phonenumbers'
+
