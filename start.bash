@@ -1,6 +1,9 @@
 
-
+#! /bin/bash
 
 echo "Installing Packages"
-echo pip install phonenumbers
+echo hello there
+pip install phonenumbers
+
+
 
