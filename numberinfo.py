@@ -4,7 +4,7 @@
 import os
 import time
 
-import '/data/data/com.termux/files/usr/lib/python2.7/site-packages/phonenumbers' as phonenumbers
+import phonenumbers
 from phonenumbers import timezone,geocoder,carrier
 
 
