@@ -12,4 +12,5 @@ git clone https://github.com/reyyymartt/pythonPractices.git
 printf "${light_green}file updated${nc}"
 ls
 printf "${light_green}exit${nc}"
+cd pythonPractices
 exit 1
