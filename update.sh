@@ -6,7 +6,7 @@ nc='\033[0m'
 
 printf "${light_green}pythonPractices updating...${nc}"
 
-cd
+exit 1
 rm -rf pythonPractices
 git clone https://github.com/reyyymartt/pythonPractices.git
 
