@@ -4,10 +4,10 @@
 light_green='\033[1;32m'
 nc='\033[0m'
 printf "${light_green}pythonPractices updating...${nc}"
-data=('phonenumbers')
+data=('phonenumbers', 'sys')
 for i in "${data[@]}"
 do
-printf ("${i}")
+pkg install i
 done
 
 rm -rf
