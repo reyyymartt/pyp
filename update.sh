@@ -7,7 +7,7 @@ printf "${light_green}pythonPractices updating...${nc}"
 data=('phonenumbers', 'sys')
 for i in "${data[@]}"
 do
-pkg install i
+pkg install "${i}"
 done
 
 rm -rf
