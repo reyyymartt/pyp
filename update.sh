@@ -9,6 +9,6 @@ printf "${light_green}pythonPractices updating..."
 cd
 rm -rf pythonPractices
 git clone https://github.com/reyyymartt/pythonPractices.git
-cd pythonPractices
+
 
 printf "${light_green}file updated"
