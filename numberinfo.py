@@ -6,7 +6,7 @@ import time
 import httpimport
 
 with httpimport.remote_repo(['phonenumbers'], 'https://github.com/daviddrysdale/python-phonenumbers.git'):
-  import package1
+  import phonenumbers
 
 from phonenumbers import timezone,geocoder,carrier
 
