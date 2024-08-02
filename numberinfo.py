@@ -1,7 +1,8 @@
 
 
 
-
+import os
+import time
 import phonenumbers
 from phonenumbers import timezone,geocoder,carrier
 
@@ -18,5 +19,4 @@ country = geocoder.description_for_number(phone,"en")
 print(phone)
 print(time)
 print(carry)
-print(country)
 print(country)
