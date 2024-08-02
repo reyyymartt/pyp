@@ -61,13 +61,13 @@ class ParseService:
       else:
         print(f'your age: {formula}')
 def app_start():
-  typeWrite("Input command")
+  print("Input command")
   res = input(': ')
   fil = res.split(" ")
   if fil[0].lower() == 'getdata' and len(fil) == 2:
     user = DataStoreService.GetAsync(fil[1])
     parse = ParseService.ParseDateBirth(user["birthdate"])
-    typeWrite(f'Name: {user["name"]}\nAge: {user["age"]}\nBirthdate: {parse}\n')
+    print(f'Name: {user["name"]}\nAge: {user["age"]}\nBirthdate: {parse}\n')
   elif fil[0].lower() == 'adduser':
     print("format: {DataKey} {Name} {age} {month/day/year}")
     answ = input(": ")
