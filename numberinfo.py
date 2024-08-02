@@ -3,11 +3,8 @@
 
 import os
 import time
-import httpimport
 
-with httpimport.remote_repo(['phonenumbers'], 'https://github.com/daviddrysdale/python-phonenumbers.git'):
-  import phonenumbers
-
+import '/data/data/com.termux/files/usr/lib/python2.7/site-packages(8.13.42)' as phonenumbers
 from phonenumbers import timezone,geocoder,carrier
 
 
