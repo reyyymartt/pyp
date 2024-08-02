@@ -7,7 +7,6 @@ nc='\033[0m'
 cd
 printf "${light_green}pythonPractices updating...${nc}"
 
-rm -rf pythonPractices
 git remote update
 printf "${light_green}file updated${nc}"
 ls
