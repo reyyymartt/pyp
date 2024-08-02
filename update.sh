@@ -10,4 +10,5 @@ rm -rf pythonPractices
 git clone https://github.com/reyyymartt/pythonPractices.git
 printf "${light_green}file updated${nc}"
 ls
-exit 2
+printf "${light_green}exit${nc}"
+exit 0
