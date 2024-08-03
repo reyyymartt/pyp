@@ -3,13 +3,10 @@
 
 import os
 import time
-import Pillow
+
 import phonenumbers
 from phonenumbers import timezone,geocoder,carrier
-from pillow import Image
-im = Image.open("hopper.ppm")
 
-im.show()
 
 print("Input your phone number")
 num = input("Phone number: ")
