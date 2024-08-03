@@ -93,7 +93,7 @@ if __name__ == "__main__":
         print(f"Could not retrieve public IP: {e}")
 def list_of_functions(args):
   for i in functions:
-    print(i, functions[i]["function"].__name__)
+    print(i, Fore.YELLOW + f"${functions[i]["function"].__name__}" + Style.RESET_ALL)
 
 def scan_wifi():
     wifi = PyWiFi()
@@ -121,8 +121,6 @@ def scanNets(args):
     for network in networks:
         print(f"SSID: {network['SSID']}, BSSID: {network['BSSID']}, Signal: {network['Signal']}, Auth: {network['Auth']}, Cipher: {network['Cipher']}")
 
-if __name__ == "__scanNets__":
-    scanNets()
   
 functions = {
   "testfunc":{
