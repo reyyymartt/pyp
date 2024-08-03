@@ -10,10 +10,10 @@ git clone https://github.com/reyyymartt/pyp.git
 
 printf "${light_green}file updated${nc}"
 cd pyp
-ls
 
 clear
-printf "system Updated!"
+ls
+echo "System updated!"
 exit 0
 
 
