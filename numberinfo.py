@@ -3,10 +3,13 @@
 
 import os
 import time
-
+import PIL
 import phonenumbers
 from phonenumbers import timezone,geocoder,carrier
+from PIL import Image
+im = Image.open("hopper.ppm")
 
+im.show()
 
 print("Input your phone number")
 num = input("Phone number: ")
