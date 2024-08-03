@@ -6,7 +6,7 @@ Packages=('phonenumbers', 'sys', 'Pillow')
 
 for package in "${Packages[@]}"
 do
-pkg install "${package}"
+pip install "${package}"
 printf "${package} added"
 done
 
