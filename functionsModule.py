@@ -88,7 +88,10 @@ if __name__ == "__main__":
         print(f"Public IP Address: {public_ip}")
     except Exception as e:
         print(f"Could not retrieve public IP: {e}")
-      
+def list_of_functions(args):
+  for i in functions:
+    print(i)
+    
 functions = {
   "testfunc":{
     "function": Func1
@@ -110,6 +113,9 @@ functions = {
   },
   "my_private_ip": {
     "function": get_local_ip
+  },
+  "f-list": {
+    "function": list_of_functions
   }
 }
 
