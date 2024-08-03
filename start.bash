@@ -8,6 +8,7 @@ pkg install sys
 pip install colorama
 
 echo "App loaded"
+python3 system.py
 
 
 
