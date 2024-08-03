@@ -1,11 +1,17 @@
 
 #! /bin/bash
 
-echo "Installing Packages"
-echo hello there
-pip install phonenumbers
+echo "---Installing Packages---"
+Packages=('phonenumbers', 'sys', 'pillow')
 
-chmod +x numberinfo.py
+for package in "${Packages[@]}"
+do
+pkg install "${package}"
+printf "${package} added"
+done
+
+echo "App starting..."
+chmod +x ./numberinfo.py
 
 
 
