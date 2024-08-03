@@ -109,7 +109,7 @@ functions = {
     "function": get_public_ip
   },
   "my_private_ip": {
-    "function": get_private_ip
+    "function": get_local_ip
   }
 }
 
