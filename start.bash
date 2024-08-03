@@ -10,7 +10,7 @@ pkg install phonenumbers
 pkg install sys
 pip install colorama
 
-echo -e "${yellow}All set, program started!${nc}"
+echo -e "${light_green}All set, program started!${nc}"
 python3 system.py
 
 
