@@ -9,7 +9,7 @@ echo -e "${light_green}---Installing Packages---${nc}"
 pkg install phonenumbers
 pkg install sys
 pip install colorama
-
+pip install requests
 
 clear
 echo -e "${light_green}All set, program started!${nc}"
