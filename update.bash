@@ -7,13 +7,11 @@ printf "${light_green}pythonPractices updating...${nc}"
 
 cd
 rm -rf pythonPractices
-git clone https://github.com/reyyymartt/pythonPractices.git
+git clone https://github.com/reyyymartt/pyp.git
 
 printf "${light_green}file updated${nc}"
-ls
 cd pythonPractices
-cd
-
+ls
 
 
 exit 1
