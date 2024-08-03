@@ -35,6 +35,11 @@ def viewData (args):
     json.dump(data, file, indent=4)
     file.truncate
     print(data["Author"])
+    
+def viewAuthor (args):
+  with open(dbName, 'r') as f:
+    data = json.load(f)
+    print(data["Author"])
 
 functions = {
   "testfunc":{
@@ -45,6 +50,9 @@ functions = {
   },
   "c-author": {
     "function": viewData
+  },
+  "v-author": {
+    "function": viewAuthor
   }
 }
 
