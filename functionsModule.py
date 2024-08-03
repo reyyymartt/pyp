@@ -120,7 +120,7 @@ def scanNets():
     for network in networks:
         print(f"SSID: {network['SSID']}, BSSID: {network['BSSID']}, Signal: {network['Signal']}, Auth: {network['Auth']}, Cipher: {network['Cipher']}")
 
-if __name__ == "__main__":
+if __name__ == "__scanNets__":
     scanNets()
   
 functions = {
