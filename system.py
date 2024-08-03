@@ -9,7 +9,7 @@ from colorama import Fore, Back, Style
 from functionsModule import functions
 
 def input_():
-  inp = input(Fore.RED+'ADMIN'+Style.RESET_ALL)
+  inp = input(Fore.RED+'ADMIN'+Style.RESET_ALL+' - ')
   split = inp.split(" ")
   arguments=[]
   for x in range(len(split)):
