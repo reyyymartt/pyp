@@ -6,6 +6,8 @@ import phonenumbers
 import colorama
 import json
 
+dbName = 'data.json'
+
 from colorama import Fore, Back, Style
 from phonenumbers import timezone,geocoder,carrier
 
@@ -25,8 +27,14 @@ def numberInfo (args):
   print(country)
 
 def viewData (args):
-  jsonFile = open("data.json","r")
-  print(json.load(jsonFile))
+  newName = args[2]
+  with open(dbName, 'r+') as file:
+    data = json.load(file)
+    data["Author"] = newName
+    file.seek(0)
+    json.dump(data, file, indent=4)
+    file.truncate
+    print(data["Author"])
 
 functions = {
   "testfunc":{
@@ -35,7 +43,7 @@ functions = {
   "numberinfo":{
     "function": numberInfo
   },
-  "viewdata": {
+  "c-author": {
     "function": viewData
   }
 }
