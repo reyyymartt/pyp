@@ -10,10 +10,12 @@ rm -rf pyp
 git clone https://github.com/reyyymartt/pyp.git
 
 printf "${light_green}file updated${nc}"
-cd pyp
+cd find pyp
 ls
 
 clear
-exit 
+printf "system Updated!"
+exit 0
+
 
 
