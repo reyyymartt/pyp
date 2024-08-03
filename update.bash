@@ -13,6 +13,6 @@ printf "${light_green}file updated${nc}"
 ls
 
 
-exit
+exit 0
 
 
