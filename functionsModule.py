@@ -5,6 +5,7 @@ import sys
 import phonenumbers
 import colorama
 import json
+import requests
 
 dbName = 'data.json'
 
@@ -41,6 +42,34 @@ def viewAuthor (args):
     data = json.load(f)
     print(data["Author"])
 
+def get_ip_info(ip_address):
+    url = f"http://ipinfo.io/{ip_address}/json"
+    response = requests.get(url)
+    
+    if response.status_code == 200:
+        data = response.json()
+        return data
+    else:
+        return None
+
+def main(args):
+  
+    ip_address = args[2]  # Replace with the IP address you want to look up
+    info = get_ip_info(ip_address)
+    
+    if info:
+        print(f"IP Address: {info.get('ip')}")
+        print(f"Hostname: {info.get('hostname')}")
+        print(f"City: {info.get('city')}")
+        print(f"Region: {info.get('region')}")
+        print(f"Country: {info.get('country')}")
+        print(f"Location: {info.get('loc')}")
+        print(f"Organization: {info.get('org')}")
+        print(f"Timezone: {info.get('timezone')}")
+    else:
+        print("Failed to get information for the given IP address.")
+  
+
 functions = {
   "testfunc":{
     "function": Func1
@@ -53,6 +82,9 @@ functions = {
   },
   "v-author": {
     "function": viewAuthor
+  },
+  "get_ip_info": {
+    "function": main
   }
 }
 
