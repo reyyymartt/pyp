@@ -14,10 +14,10 @@ def input_():
   arguments=[]
   for x in range(len(split)):
   	arguments.append(split[x].lower())
-
+  print(arguments)
   if (split[0]=="exit"):
     return False
-  elif(split[0]=="exec" and len(split)==2):
+  elif(split[0]=="exec" and len(split)>=2):
     if (split[1].lower() in functions):
     	functions[split[1].lower()]["func"](arguments)
     else:
