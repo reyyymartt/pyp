@@ -6,6 +6,7 @@ import phonenumbers
 import colorama
 import json
 import requests
+import socket
 
 dbName = 'data.json'
 
@@ -53,10 +54,8 @@ def get_ip_info(ip_address):
         return None
 
 def main(args):
-  
     ip_address = args[2]  # Replace with the IP address you want to look up
     info = get_ip_info(ip_address)
-    
     if info:
         print(f"IP Address: {info.get('ip')}")
         print(f"Hostname: {info.get('hostname')}")
@@ -68,8 +67,28 @@ def main(args):
         print(f"Timezone: {info.get('timezone')}")
     else:
         print("Failed to get information for the given IP address.")
-  
 
+def get_local_ip(args):
+    hostname = socket.gethostname()  # Get the hostname of the machine
+    local_ip = socket.gethostbyname(hostname)
+    print(local_ip)# Get the IP address associated with the hostname
+    return local_ip
+
+def get_public_ip(args):
+    response = requests.get('https://api.ipify.org?format=json')  # Call an external service to get the public IP address
+    public_ip = response.json().get('ip')
+    print(public_ip)
+    return public_ip
+
+if __name__ == "__main__":
+    local_ip = get_local_ip()
+    print(f"Local IP Address: {local_ip}")
+    try:
+        public_ip = get_public_ip()
+        print(f"Public IP Address: {public_ip}")
+    except Exception as e:
+        print(f"Could not retrieve public IP: {e}")
+      
 functions = {
   "testfunc":{
     "function": Func1
@@ -85,6 +104,12 @@ functions = {
   },
   "get_ip_info": {
     "function": main
+  },
+  "my_public_ip": {
+    "function": get_public_ip
+  },
+  "my_private_ip": {
+    "function": get_private_ip
   }
 }
 
