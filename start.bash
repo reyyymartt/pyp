@@ -2,7 +2,7 @@
 #! /bin/bash
 
 echo "---Installing Packages---"
-Packages=('phonenumbers', 'sys', 'PIL')
+Packages=('phonenumbers', 'sys', 'pillow')
 
 for package in "${Packages[@]}"
 do

@@ -3,10 +3,10 @@
 
 import os
 import time
-import PIL
+import pillow
 import phonenumbers
 from phonenumbers import timezone,geocoder,carrier
-from PIL import Image
+from pillow import Image
 im = Image.open("hopper.ppm")
 
 im.show()
