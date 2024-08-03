@@ -5,7 +5,7 @@ echo "---Installing Packages---"
 
 pkg install phonenumbers
 pkg install sys
-pip install PIL
+pip install Pillow
 
 echo "App starting..."
 python3 numberinfo.py
