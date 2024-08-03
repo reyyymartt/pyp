@@ -11,6 +11,7 @@ git clone https://github.com/reyyymartt/pyp.git
 
 printf "${light_green}file updated${nc}"
 cd
+cd pyp
 ls
 
 
