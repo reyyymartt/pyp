@@ -14,6 +14,6 @@ cd pyp
 ls
 
 
-exit 
+exit 0
 
 
