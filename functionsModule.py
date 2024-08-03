@@ -8,6 +8,7 @@ import json
 import requests
 import socket
 import pywifi
+import os
 
 dbName = 'data.json'
 
@@ -92,7 +93,7 @@ if __name__ == "__main__":
         print(f"Could not retrieve public IP: {e}")
 def list_of_functions(args):
   for i in functions:
-    print(i)
+    print(i, functions[i]["function"].__name__)
 
 def scan_wifi():
     wifi = PyWiFi()
