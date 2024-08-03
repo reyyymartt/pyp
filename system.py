@@ -20,7 +20,7 @@ def input_():
     if (split[1].lower() in functions):
     	functions[split[1].lower()]["func"](arguments)
     else:
-    	print(split[1],"not found")
+    	print('Function ['+Fore.RED+split[1]+Style.RESET_ALL+'] not found')
     
     
   input_()
