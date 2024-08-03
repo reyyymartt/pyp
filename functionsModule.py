@@ -94,7 +94,7 @@ if __name__ == "__main__":
       
 def list_of_functions(args):
   for i in functions:
-    print(i + Fore.GREEN +' function = '+Fore.YELLOW functions[i]["function"].__name__+'()' + Style.RESET_ALL)
+    print(i + Fore.GREEN +' function = '+Fore.YELLOW+functions[i]["function"].__name__+'()' + Style.RESET_ALL)
 
 def scan_wifi():
     wifi = PyWiFi()
