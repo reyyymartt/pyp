@@ -4,11 +4,12 @@ import json
 import time, sys
 import phonenumbers
 import functionsModule
-
+import colorama
+from colorama import Fore, Back, Style
 from functionsModule import functions
 
 def input_():
-  inp = input("> ")
+  inp = input(Fore.RED+'ADMIN'+Style.RESET_ALL)
   split = inp.split(" ")
   arguments=[]
   for x in range(len(split)):
