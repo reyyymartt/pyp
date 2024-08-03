@@ -14,7 +14,6 @@ def input_():
   arguments=[]
   for x in range(len(split)):
   	arguments.append(split[x].lower())
-  print(arguments)
   if (split[0]=="exit"):
     return False
   elif(split[0]=="exec" and len(split)>=2):
