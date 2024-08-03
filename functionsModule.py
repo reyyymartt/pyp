@@ -91,9 +91,10 @@ if __name__ == "__main__":
         print(f"Public IP Address: {public_ip}")
     except Exception as e:
         print(f"Could not retrieve public IP: {e}")
+      
 def list_of_functions(args):
   for i in functions:
-    print(i, Fore.YELLOW + f"${functions[i]["function"].__name__}" + Style.RESET_ALL)
+    print(i + Fore.YELLOW +' function = '+ functions[i]["function"].__name__+'()' + Style.RESET_ALL)
 
 def scan_wifi():
     wifi = PyWiFi()
