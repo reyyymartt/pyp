@@ -3,7 +3,7 @@
 
 import os
 import time
-import Pillow
+import PIL
 import phonenumbers
 from phonenumbers import timezone,geocoder,carrier
 from pillow import Image

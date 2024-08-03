@@ -2,11 +2,15 @@
 #! /bin/bash
 
 echo "---Installing Packages---"
-Packages=('phonenumbers', 'sys', 'Pillow')
+Packages=(
+  'pkg install phonenumbers',
+  'pkg install sys',
+  'pip install PIL'
+  )
 
 for package in "${Packages[@]}"
 do
-pip install "${package}"
+"${package}"
 printf "${package} added"
 done
 
