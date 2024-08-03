@@ -12,9 +12,9 @@ git clone https://github.com/reyyymartt/pyp.git
 printf "${light_green}file updated${nc}"
 
 clear
-
 echo "System updated!"
-ls
+cd pyp
+ls -l
 exit 
 
 
