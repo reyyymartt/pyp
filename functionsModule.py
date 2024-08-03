@@ -25,8 +25,8 @@ def numberInfo (args):
   print(country)
 
 def viewData (args):
-  with open('./data.json', 'r+') as file:
-    data = json.load(file)
+  with open('./data.json', 'r') as f:
+    data = json.load(f)
     print(data)
 
 functions = {
