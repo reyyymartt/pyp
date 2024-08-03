@@ -10,9 +10,10 @@ rm -rf pyp
 git clone https://github.com/reyyymartt/pyp.git
 
 printf "${light_green}file updated${nc}"
+cd pyp
 ls
 
 
-exit 2
+exit 
 
 
