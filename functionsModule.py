@@ -26,7 +26,7 @@ def numberInfo (args):
 
 def viewData (args):
   jsonFile = open("data.json","r")
-  print(jsonFile)
+  print(json.load(jsonFile))
 
 functions = {
   "testfunc":{
