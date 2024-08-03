@@ -7,11 +7,13 @@ import colorama
 import json
 import requests
 import socket
+import pywifi
 
 dbName = 'data.json'
 
 from colorama import Fore, Back, Style
 from phonenumbers import timezone,geocoder,carrier
+from pywifi import PyWiFi, const, Profile
 
 def Func1(args):
   print(Fore.RED + Back.GREEN + 'Function called' + Style.RESET_ALL)
@@ -91,7 +93,36 @@ if __name__ == "__main__":
 def list_of_functions(args):
   for i in functions:
     print(i)
-    
+
+def scan_wifi():
+    wifi = PyWiFi()
+    iface = wifi.interfaces()[0]  # Get the first wireless interface
+
+    iface.scan()  # Start scanning
+    time.sleep(5)  # Wait for the scan to complete
+
+    scan_results = iface.scan_results()  # Get the scan results
+    networks = []
+
+    for network in scan_results:
+        ssid = network.ssid
+        bssid = network.bssid
+        signal = network.signal
+        auth = network.akm[0] if network.akm else "Unknown"
+        cipher = network.cipher if network.cipher else "Unknown"
+        networks.append({'SSID': ssid, 'BSSID': bssid, 'Signal': signal, 'Auth': auth, 'Cipher': cipher})
+
+    return networks
+
+def scanNets():
+    networks = scan_wifi()
+    print("Available WiFi networks:")
+    for network in networks:
+        print(f"SSID: {network['SSID']}, BSSID: {network['BSSID']}, Signal: {network['Signal']}, Auth: {network['Auth']}, Cipher: {network['Cipher']}")
+
+if __name__ == "__main__":
+    scanNets()
+  
 functions = {
   "testfunc":{
     "function": Func1
@@ -116,6 +147,9 @@ functions = {
   },
   "f-list": {
     "function": list_of_functions
+  },
+  "swn": {
+    "function": scanNets
   }
 }
 
