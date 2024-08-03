@@ -4,6 +4,7 @@ import time
 import sys
 import phonenumbers
 import colorama
+import json
 
 from colorama import Fore, Back, Style
 from phonenumbers import timezone,geocoder,carrier
@@ -23,11 +24,20 @@ def numberInfo (args):
   print(carry)
   print(country)
 
+def viewData (args):
+  with open('data.json', 'r') as file:
+    data = json.load(file)
+    print(data)
+
 functions = {
   "testfunc":{
     "function": Func1
   },
   "numberinfo":{
     "function": numberInfo
+  },
+  "viewdata": {
+    "function": viewData
   }
 }
+
