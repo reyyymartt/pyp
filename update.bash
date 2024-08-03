@@ -12,6 +12,8 @@ git clone https://github.com/reyyymartt/pythonPractices.git
 printf "${light_green}file updated${nc}"
 ls
 cd
+rm -rf pythonPractices
+
 
 exit 1
 
