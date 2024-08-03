@@ -4,7 +4,7 @@
 light_green='\e[1;32m'
 yellow='\e[33m'
 nc='\e[0m'
-echo -e "${light_green}system updating...${nc}"
+echo -e "${yellow}system updating...${nc}"
 
 cd 
 rm -rf pyp
