@@ -10,7 +10,7 @@ Packages=(
 
 for package in "${Packages[@]}"
 do
-"${package}"
+package
 printf "${package} added"
 done
 
