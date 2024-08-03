@@ -18,7 +18,7 @@ def input_():
     return False
   elif(split[0]=="exec" and len(split)>=2):
     if (split[1].lower() in functions):
-    	functions[split[1].lower()]["func"](arguments)
+    	functions[split[1].lower()]["function"](arguments)
     else:
     	print('Function ['+Fore.RED+split[1]+Style.RESET_ALL+'] not found')
     
