@@ -15,6 +15,7 @@ clear
 echo "System updated!"
 cd pyp
 ls -l
+bash start.bash
 exit 
 
 
