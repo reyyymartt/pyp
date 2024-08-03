@@ -16,7 +16,7 @@ clear
 
 echo "System updated!"
 ls
-exit 0
+exit 
 
 
 
