@@ -114,7 +114,7 @@ def scan_wifi():
 
     return networks
 
-def scanNets():
+def scanNets(args):
     networks = scan_wifi()
     print("Available WiFi networks:")
     for network in networks:
