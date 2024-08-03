@@ -15,7 +15,7 @@ echo -e "${light_green}file updated${nc}"
 clear
 echo -e "${yellow}System updated!${nc}"
 cd pyp
-ls -l
+ls
 bash start.bash
 exit 
 
