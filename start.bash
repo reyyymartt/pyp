@@ -11,7 +11,7 @@ printf "${package} added"
 done
 
 echo "App starting..."
-chmod +x ./numberinfo.py
+python3 numberinfo.py
 
 
 
