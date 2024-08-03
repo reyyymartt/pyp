@@ -1,5 +1,5 @@
 # pyp
 My very first terminal program
 
-use (base start.bash) to start the program
+use (bash start.bash) command to start the program
 
