@@ -98,7 +98,7 @@ def list_of_functions(args):
   table = []
   for i in functions:
     funcText = Fore.YELLOW + functions[i]["function"].__name__ +'()'+Style.RESET_ALL
-    table.append([functions[i],funcText])
+    table.append([i,funcText])
     
   finishProduct=tabulate(table,headers=['Command Name', 'Inner Function'])
   print(finishProduct)
