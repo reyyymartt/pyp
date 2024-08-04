@@ -105,33 +105,6 @@ def list_of_functions(args):
   finishProduct=tabulate(table,headers=['Command Name', 'Function'], tablefmt='orgtbl')
   print(finishProduct)
   
-def scan_wifi():
-    wifi = PyWiFi()
-    iface = wifi.interfaces()[0]  # Get the first wireless interface
-
-    iface.scan()  # Start scanning
-    time.sleep(5)  # Wait for the scan to complete
-
-    scan_results = iface.scan_results()  # Get the scan results
-    networks = []
-
-    for network in scan_results:
-        ssid = network.ssid
-        bssid = network.bssid
-        signal = network.signal
-        auth = network.akm[0] if network.akm else "Unknown"
-        cipher = network.cipher if network.cipher else "Unknown"
-        networks.append({'SSID': ssid, 'BSSID': bssid, 'Signal': signal, 'Auth': auth, 'Cipher': cipher})
-
-    return networks
-
-def scanNets(args):
-    networks = scan_wifi()
-    print("Available WiFi networks:")
-    for network in networks:
-        print(f"SSID: {network['SSID']}, BSSID: {network['BSSID']}, Signal: {network['Signal']}, Auth: {network['Auth']}, Cipher: {network['Cipher']}")
-
-  
 functions = {
   "testfunc":{
     "function": Func1
@@ -157,8 +130,5 @@ functions = {
   "f-list": {
     "function": list_of_functions
   },
-  "swn": {
-    "function": scanNets
-  }
 }
 
