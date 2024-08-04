@@ -9,29 +9,13 @@ import colorama
 
 from colorama import Fore, Back, Style
 from functionsModule import functions
+from dataModule import command_functions
 
-
-def run_com (args):
-  first_[]
-
-def function():
-  pass
+def function(str, args):
+  command_functions[str](args)
   
-def notFunction (args):
-  pass
-  
-def executeFunction (args):
-  
-  
-first_={
-  "exit": {
-    "run": run_com
-  },
-  "exec": {
-    "run": executeFunction
-  },
-  
-}
+def notFunction(str, args):
+  print("uknown command = "+Fore.RED+str+Style.RESET_ALL)
 
 decision={
   True: function,
@@ -41,12 +25,11 @@ decision={
 def input_():
   inp = input(Fore.YELLOW+'admin'+Fore.GREEN+' $ '+Style.RESET_ALL)
   split = inp.split(" ")
-  arguments=[]
+  args=[]
   check=(split[0] in first_) or False
   for x in range(len(split)):
   	arguments.append(split[x].lower())
-  
-  decision[check](arguments)
+  decision[check](split[0], args)
   input_()
     
     
