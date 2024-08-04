@@ -28,7 +28,7 @@ def input_():
   args=[]
   check=(split[0] in command_functions) or False
   for x in range(len(split)):
-  	arguments.append(split[x].lower())
+  	args.append(split[x].lower())
   decision[check](split[0], args)
   input_()
     
