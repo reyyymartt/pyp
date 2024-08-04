@@ -17,7 +17,7 @@ def executeFunction (str, args):
     if (check==True):
       functions[args[1]]["function"](args)
     else:
-      print("couldn't find["+Fore.RED+args[1]+Style.RESET_ALL+'] as a function')
+      print("no function called {"+Fore.RED+args[1]+Style.RESET_ALL+'}')
 
 
 command_functions={
