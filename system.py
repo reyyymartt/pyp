@@ -12,7 +12,7 @@ from functionsModule import functions
 from dataModule import command_functions
 
 def function(str, args):
-  command_functions[str](args)
+  command_functions[str](str, args)
   
 def notFunction(str, args):
   print("uknown command = "+Fore.RED+str+Style.RESET_ALL)
