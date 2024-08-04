@@ -7,9 +7,17 @@ import functionsModule
 import dataModule
 import colorama
 
+from PIL import Image
 from colorama import Fore, Back, Style
 from functionsModule import functions
 from dataModule import command_functions
+
+def load_and_display_image(image_path):
+    # Load the image
+    img = Image.open(image_path)
+    # Display the image
+    img.show()
+  
 
 def function(str, args):
   command_functions[str](str, args)
@@ -21,7 +29,7 @@ decision={
   True: function,
   False: notFunction
 }
-
+load_and_display_image("show.jpg")
 def input_():
   inp = input(Fore.YELLOW+'admin'+Fore.GREEN+' $ '+Style.RESET_ALL)
   split = inp.split(" ")
