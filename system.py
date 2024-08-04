@@ -21,7 +21,7 @@ decision={
   True: function,
   False: notFunction
 }
-load_and_display_image("show.jpg")
+
 def input_():
   inp = input(Fore.YELLOW+'admin'+Fore.GREEN+' $ '+Style.RESET_ALL)
   split = inp.split(" ")
