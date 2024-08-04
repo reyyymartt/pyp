@@ -5,8 +5,24 @@ import time, sys
 import phonenumbers
 import functionsModule
 import colorama
+
 from colorama import Fore, Back, Style
 from functionsModule import functions
+
+def first_c (args):
+  pass
+
+def sub_c (args):
+  pass
+
+first_={
+  "exit": {
+    "run": first_c
+  },
+  "exec": {
+    "run": sub_c
+  }
+}
 
 def input_():
   inp = input(Fore.YELLOW+'admin'+Fore.GREEN+' $ '+Style.RESET_ALL)
