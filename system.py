@@ -6,6 +6,7 @@ import phonenumbers
 import functionsModule
 import dataModule
 import colorama
+import PIL
 
 from PIL import Image
 from colorama import Fore, Back, Style
