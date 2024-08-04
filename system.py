@@ -6,19 +6,10 @@ import phonenumbers
 import functionsModule
 import dataModule
 import colorama
-import pillow
 
-from pillow import Image
 from colorama import Fore, Back, Style
 from functionsModule import functions
 from dataModule import command_functions
-
-def load_and_display_image(image_path):
-    # Load the image
-    img = Image.open(image_path)
-    # Display the image
-    img.show()
-  
 
 def function(str, args):
   command_functions[str](str, args)
