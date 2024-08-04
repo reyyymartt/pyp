@@ -14,7 +14,7 @@ pip install pywifi
 pip install kivy
 
 clear
-echo -e "${light_green}All set, program started!${nc}"
+echo -e "${light_green}Installation Finished, program started!${nc}"
 python3 system.py
 
 
