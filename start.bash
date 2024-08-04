@@ -11,7 +11,7 @@ pip install tabulate
 pip install colorama
 pip install requests
 pip install pywifi
-pip install pillow
+pip install kivy
 
 clear
 echo -e "${light_green}All set, program started!${nc}"
