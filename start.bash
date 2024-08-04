@@ -7,7 +7,7 @@ nc='\e[0m'
 echo -e "${light_green}---Installing Packages---${nc}"
 
 pip install phonenumbers
-pip install sys
+pip install tabulate
 pip install colorama
 pip install requests
 pip install pywifi
