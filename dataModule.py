@@ -18,7 +18,7 @@ def executeFunction (str, args):
       print("couldn't find["+Fore.RED+args[1]+Style.RESET_ALL+'] as a function')
 
 
-command_functions {
+command_functions={
   "exit": ignore,
   "exe": executeFunction
 }
