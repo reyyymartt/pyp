@@ -7,7 +7,6 @@ import colorama
 import json
 import requests
 import socket
-import pywifi
 import os
 import tabulate
 
