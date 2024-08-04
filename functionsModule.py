@@ -105,30 +105,4 @@ def list_of_functions(args):
   finishProduct=tabulate(table,headers=['Command Name', 'Function'], tablefmt='orgtbl')
   print(finishProduct)
   
-functions = {
-  "testfunc":{
-    "function": Func1
-  },
-  "numberinfo":{
-    "function": numberInfo
-  },
-  "c-author": {
-    "function": viewData
-  },
-  "v-author": {
-    "function": viewAuthor
-  },
-  "get_ip_info": {
-    "function": main
-  },
-  "my_public_ip": {
-    "function": get_public_ip
-  },
-  "my_private_ip": {
-    "function": get_local_ip
-  },
-  "f-list": {
-    "function": list_of_functions
-  },
-}
 
