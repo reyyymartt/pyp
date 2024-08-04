@@ -15,7 +15,7 @@ def function(str, args):
   command_functions[str](str, args)
   
 def notFunction(str, args):
-  print("uknown command = "+Fore.RED+str+Style.RESET_ALL)
+  return False
 
 decision={
   True: function,
