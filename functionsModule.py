@@ -9,12 +9,14 @@ import requests
 import socket
 import pywifi
 import os
+import tabulate
 
 dbName = 'data.json'
 
 from colorama import Fore, Back, Style
 from phonenumbers import timezone,geocoder,carrier
 from pywifi import PyWiFi, const, Profile
+from tabulate import tabulate
 
 def Func1(args):
   print(Fore.RED + Back.GREEN + 'Function called' + Style.RESET_ALL)
@@ -93,9 +95,14 @@ if __name__ == "__main__":
         print(f"Could not retrieve public IP: {e}")
       
 def list_of_functions(args):
+  table = []
   for i in functions:
-    print(i + Fore.GREEN +' function = '+Fore.YELLOW+functions[i]["function"].__name__+'()' + Style.RESET_ALL)
-
+    funcText = Fore.YELLOW + function[i]["function"].__name__ +'()'+Style.RESET_ALL
+    table.append([functions[i],funcText])
+    
+  finishProduct=tabulate(table,headers=['Command Name', 'Inner Function'])
+  print(finishProduct)
+  
 def scan_wifi():
     wifi = PyWiFi()
     iface = wifi.interfaces()[0]  # Get the first wireless interface
