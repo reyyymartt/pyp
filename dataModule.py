@@ -5,9 +5,11 @@ import colorama
 from functionsModule import functions
 from colorama import Fore, Back, Style
 
+def logoutApp():
+  print("end")
 
 def ignore(str, args):
-  return False
+  return logoutApp()
 
 def executeFunction (str, args):
   if (len(args)>=1):
