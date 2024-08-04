@@ -9,7 +9,7 @@ def logoutApp():
   print("end")
 
 def ignore(str, args):
-  return logoutApp()
+  pass
 
 def executeFunction (str, args):
   if (len(args)>=1):
