@@ -6,8 +6,8 @@ nc='\e[0m'
 
 echo -e "${light_green}---Installing Packages---${nc}"
 
-pkg install phonenumbers
-pkg install sys
+pip install phonenumbers
+pip install sys
 pip install colorama
 pip install requests
 pip install pywifi
