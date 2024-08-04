@@ -6,9 +6,9 @@ import phonenumbers
 import functionsModule
 import dataModule
 import colorama
-import PIL
+import pillow
 
-from PIL import Image
+from pillow import Image
 from colorama import Fore, Back, Style
 from functionsModule import functions
 from dataModule import command_functions
