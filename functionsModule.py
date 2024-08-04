@@ -21,13 +21,16 @@ def Func1(args):
   print(Fore.RED + Back.GREEN + 'Function called' + Style.RESET_ALL)
   
 def numberInfo (args):
+  table=[]
   print("input phonenumber, with country code")
-  num=input(Fore.RED+">> "+Style.RESET_ALL)
+  print("Example: +63xxxxxxxxxx")
+  num=input(Fore.GREEN+">> "+Style.RESET_ALL)
   phone = phonenumbers.parse(num)
   time = timezone.time_zones_for_number(phone)
   carry = carrier.name_for_number(phone,"en")
   country = geocoder.description_for_number(phone,"en")
-  print(phone)
+  
+  print(phone["Country Code"])
   print(time)
   print(carry)
   print(country)
