@@ -99,7 +99,7 @@ def list_of_functions(args):
     funcText = Fore.YELLOW + functions[i]["function"].__name__ +'()'+Style.RESET_ALL
     table.append([i,funcText])
     
-  finishProduct=tabulate(table,headers=['Command Name', 'Inner Function'])
+  finishProduct=tabulate(table,headers=['Command Name', 'Function'], tablefmt='orgtbl')
   print(finishProduct)
   
 def scan_wifi():
