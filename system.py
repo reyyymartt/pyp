@@ -4,41 +4,49 @@ import json
 import time, sys
 import phonenumbers
 import functionsModule
+import dataModule
 import colorama
 
 from colorama import Fore, Back, Style
 from functionsModule import functions
 
-def first_c (args):
-  pass
 
-def sub_c (args):
-  pass
+def run_com (args):
+  first_[]
 
+def function():
+  pass
+  
+def notFunction (args):
+  pass
+  
+def executeFunction (args):
+  
+  
 first_={
   "exit": {
-    "run": first_c
+    "run": run_com
   },
   "exec": {
-    "run": sub_c
-  }
+    "run": executeFunction
+  },
+  
+}
+
+decision={
+  True: function,
+  False: notFunction
 }
 
 def input_():
   inp = input(Fore.YELLOW+'admin'+Fore.GREEN+' $ '+Style.RESET_ALL)
   split = inp.split(" ")
   arguments=[]
+  check=(split[0] in first_) or False
   for x in range(len(split)):
   	arguments.append(split[x].lower())
-  if (split[0]=="exit"):
-    return False
-  elif(split[0]=="exec" and len(split)>=2):
-    if (split[1].lower() in functions):
-    	functions[split[1].lower()]["function"](arguments)
-    else:
-    	print('Function ['+Fore.RED+split[1]+Style.RESET_ALL+'] not found')
-    
-    
+  
+  decision[check](arguments)
   input_()
     
     
