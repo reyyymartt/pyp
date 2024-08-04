@@ -97,7 +97,7 @@ if __name__ == "__main__":
 def list_of_functions(args):
   table = []
   for i in functions:
-    funcText = Fore.YELLOW + function[i]["function"].__name__ +'()'+Style.RESET_ALL
+    funcText = Fore.YELLOW + functions[i]["function"].__name__ +'()'+Style.RESET_ALL
     table.append([functions[i],funcText])
     
   finishProduct=tabulate(table,headers=['Command Name', 'Inner Function'])
