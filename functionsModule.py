@@ -30,7 +30,7 @@ def numberInfo (args):
   carry = carrier.name_for_number(phone,"en")
   country = geocoder.description_for_number(phone,"en")
   
-  print(phone["Country Code"])
+  print(phone)
   print(time)
   print(carry)
   print(country)
