@@ -26,7 +26,7 @@ def input_():
   inp = input(Fore.YELLOW+'admin'+Fore.GREEN+' $ '+Style.RESET_ALL)
   split = inp.split(" ")
   args=[]
-  check=(split[0] in first_) or False
+  check=(split[0] in command_functions) or False
   for x in range(len(split)):
   	arguments.append(split[x].lower())
   decision[check](split[0], args)
