@@ -3,7 +3,7 @@ import functionsModule
 import colorama
 
 from functionsModule import functions
-from colorama import Fore, Back, style
+from colorama import Fore, Back, Style
 
 
 def ignore(str, args):
