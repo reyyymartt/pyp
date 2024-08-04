@@ -26,6 +26,8 @@ def input_():
   inp = input(Fore.YELLOW+'admin'+Fore.GREEN+' $ '+Style.RESET_ALL)
   split = inp.split(" ")
   args=[]
+  if (split[0].lower()=="exit"):
+    return False
   check=(split[0] in command_functions) or False
   for x in range(len(split)):
   	args.append(split[x].lower())
