@@ -12,6 +12,9 @@ pip install colorama
 pip install requests
 pip install pywifi
 pip install Flask
+pip install beautifulsoup4 scrapy pyautogui
+pip install pandas numpy matplotlib
+
 
 clear
 echo -e "${light_green}Installation Finished, program started!${nc}"
