@@ -25,7 +25,7 @@ def executeFunction (str, args):
       search=searCH(table,args[1])
       if (len(search)>0):
         for a in search:
-          print("Did you mean "+Fore.YELLOW+args[1]+Style.RESET_ALL)
+          print("Did you mean "+Fore.YELLOW+a+Style.RESET_ALL+"?")
 
 command_functions={
   "exit": ignore,
