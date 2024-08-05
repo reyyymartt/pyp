@@ -36,15 +36,17 @@ def numberInfo (args):
   print(country)
 
 def viewData (args):
-  check = (len(args)>=2) or return False
-  print(check)
-  with open(dbName, 'r+') as file:
+  check = (len(args)>=2) or False
+  if (check==True):
+    with open(dbName, 'r+') as file:
     data = json.load(file)
     data["Author"] = args[2]
     file.seek(0)
     json.dump(data, file, indent=4)
     file.truncate
     print(data["Author"])
+  else:
+    print("Missing argument 1")
     
 def viewAuthor (args):
   with open(dbName, 'r') as f:
