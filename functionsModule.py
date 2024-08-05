@@ -38,10 +38,10 @@ def numberInfo (args):
 def viewData (args):
   check = (len(args)>=2) or False
   answer=input("New author: ")
-  if (check!=""):
+  if (answer!=""):
     with open(dbName, 'r+') as file:
       data = json.load(file)
-      data["Author"] = args[2]
+      data["Author"] = answer
       file.seek(0)
       json.dump(data, file, indent=4)
       file.truncate
