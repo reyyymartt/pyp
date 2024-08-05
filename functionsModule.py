@@ -9,6 +9,7 @@ import requests
 import socket
 import os
 import tabulate
+import re
 
 dbName = 'data.json'
 
@@ -34,6 +35,17 @@ def numberInfo (args):
   print(time)
   print(carry)
   print(country)
+  
+def searCH(table,str):
+  if (isinstanceof(table,(set))==True):
+    suspected=[]
+    for x in table:
+      if (re.search(str,x)!=None):
+        suspected.append(x)
+    return suspected
+  else:
+    return None
+    
 
 def viewData (args):
   check = (len(args)>=2) or False
