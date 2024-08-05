@@ -36,7 +36,7 @@ def numberInfo (args):
   print(country)
 
 def viewData (args):
-  newName = args[2]
+  newName = (args[2]) or False
   with open(dbName, 'r+') as file:
     data = json.load(file)
     data["Author"] = newName
