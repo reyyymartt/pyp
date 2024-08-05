@@ -65,9 +65,12 @@ def get_ip_info(ip_address):
         return None
 
 def main(args):
-    ip_address = args[2]  # Replace with the IP address you want to look up
-    info = get_ip_info(ip_address)
-    if info:
+    answer=input("Input ip address: ")
+    if (answer!=""):
+      
+       # Replace with the IP address you want to look up
+      info = get_ip_info(answer)
+      if info:
         print(f"IP Address: {info.get('ip')}")
         print(f"Hostname: {info.get('hostname')}")
         print(f"City: {info.get('city')}")
@@ -76,8 +79,10 @@ def main(args):
         print(f"Location: {info.get('loc')}")
         print(f"Organization: {info.get('org')}")
         print(f"Timezone: {info.get('timezone')}")
-    else:
+      else:
         print("Failed to get information for the given IP address.")
+    else:
+      print(Fore.RED+"No ip input"+Style.RESET_ALL)
 
 def get_local_ip(args):
     hostname = socket.gethostname()  # Get the hostname of the machine
