@@ -12,6 +12,7 @@ pip install colorama
 pip install requests
 pip install pywifi
 pip install Flask
+pip install re
 
 clear
 echo -e "${light_green}Installation Finished, program started!${nc}"
