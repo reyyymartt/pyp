@@ -37,7 +37,7 @@ def numberInfo (args):
   print(country)
   
 def searCH(table,str):
-  if (isinstanceof(table,(set))==True):
+  if (isinstance(table,(set))==True):
     suspected=[]
     for x in table:
       if (re.search(str,x)!=None):
