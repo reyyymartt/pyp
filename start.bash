@@ -15,7 +15,7 @@ pip install Flask
 
 clear
 echo -e "${light_green}Installation Finished, program started!${nc}"
-python3 system.py
+python3 index.py
 
 
 
