@@ -6,9 +6,8 @@ from functionsModule import functions, searCH
 from colorama import Fore, Back, Style
 
 
-def logoutApp():
-  print("end")
-
+def log():
+  pass
 def ignore(str, args):
   logoutApp()
 
