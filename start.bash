@@ -11,10 +11,11 @@ pip install tabulate
 pip install colorama
 pip install requests
 pip install Flask
-pip install turtle
+
 
 clear
 echo -e "${light_green}Installation Finished, program started!${nc}"
+
 python3 index.py
 
 
