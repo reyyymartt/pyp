@@ -10,8 +10,8 @@ pip install phonenumbers
 pip install tabulate
 pip install colorama
 pip install requests
-pip install pywifi
 pip install Flask
+pip install turtle
 
 clear
 echo -e "${light_green}Installation Finished, program started!${nc}"
