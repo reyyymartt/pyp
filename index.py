@@ -16,9 +16,10 @@ config={
   "dbName": "data.json"
 }
 
-with open(config["dbName"], 'r') as file:
-  data=json.load(file)
-  config["user"] = data["Author"]
+def updateUser():
+  with open(config["dbName"], 'r') as file:
+    data=json.load(file)
+    config["user"] = data["Author"]
 
 def function(str, args):
   command_functions[str](str, args)
@@ -30,7 +31,7 @@ decision={
   True: function,
   False: notFunction
 }
-
+updateUser()
 def input_():
   inp = input(Fore.YELLOW+config["user"]+Fore.GREEN+' $ '+Style.RESET_ALL)
   split = inp.split(" ")
