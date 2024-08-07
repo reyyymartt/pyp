@@ -31,8 +31,8 @@ decision={
   True: function,
   False: notFunction
 }
-updateUser()
 def input_():
+  updateUser()
   inp = input(Fore.YELLOW+config["user"]+Fore.GREEN+' $ '+Style.RESET_ALL)
   split = inp.split(" ")
   args=[]
