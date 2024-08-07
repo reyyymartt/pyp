@@ -10,9 +10,10 @@ import socket
 import os
 import tabulate
 import re
+import pyptools
 
 dbName = 'data.json'
-
+from pyptools import *
 from colorama import Fore, Back, Style
 from phonenumbers import timezone,geocoder,carrier
 from pywifi import PyWiFi, const, Profile
@@ -59,7 +60,7 @@ def viewData (args):
       file.truncate
       print(data["Author"])
   else:
-      print("Missing argument 1")
+      print(colortext("Missing argument 1","red"))
     
 def viewAuthor (args):
   with open(dbName, 'r') as f:
