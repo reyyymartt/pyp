@@ -11,6 +11,7 @@ import os
 import tabulate
 import re
 import pyptools
+import index
 
 dbName = 'data.json'
 from pyptools import *
@@ -18,6 +19,7 @@ from colorama import Fore, Back, Style
 from phonenumbers import timezone,geocoder,carrier
 from pywifi import PyWiFi, const, Profile
 from tabulate import tabulate
+from index import updateUser
 
 def Func1(args):
   print(Fore.RED + Back.GREEN + 'Function called' + Style.RESET_ALL)
@@ -59,6 +61,7 @@ def viewData (args):
       json.dump(data, file, indent=4)
       file.truncate
       print(data["Author"])
+      updateUser()
   else:
       print(colortext("Missing argument 1","red"))
     
