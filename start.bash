@@ -11,6 +11,7 @@ pip install tabulate
 pip install colorama
 pip install requests
 pip install Flask
+pip install fontstyle
 
 
 clear
