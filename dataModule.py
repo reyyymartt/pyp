@@ -13,7 +13,7 @@ def ignore(str, args):
   logoutApp()
 
 def executeFunction (str, args):
-  if (len(args)>=1):
+  if (len(args)>1):
     check=(args[1] in functions) or False
     if (check==True):
       functions[args[1]]["function"](args)
