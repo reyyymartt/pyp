@@ -5,11 +5,8 @@ import colorama
 from functionsModule import functions, searCH
 from colorama import Fore, Back, Style
 
-
-def log():
-  pass
 def ignore(str, args):
-  logoutApp()
+  exit()
 
 def executeFunction (str, args):
   if (len(args)>1):
