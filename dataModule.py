@@ -38,5 +38,6 @@ def executeFunction (str, args):
 
 command_functions={
   "exit": ignore,
-  "exe": executeFunction
+  "exe": executeFunction,
+  "run": runPro
 }
