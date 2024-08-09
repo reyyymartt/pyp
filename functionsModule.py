@@ -131,7 +131,7 @@ def color_text (args):
   put=input("color: red,green,cyan,magenta")
   text=input("text: ")
   bold=input("bold: 1=no,2=yes")
-  colored=colortext(text,color)
+  colored=colortext(text,put)
   if (bold=="1"):
     colored=boldtext(colored)
   print(colored)
