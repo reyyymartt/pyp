@@ -128,9 +128,9 @@ def list_of_functions(args):
   print(finishProduct)
 
 def color_text (args):
-  put=input("color: red,green,cyan,magenta")
+  put=input('color: red,green,yellow,magenta\n>')
   text=input("text: ")
-  bold=input("bold: 1=no,2=yes")
+  bold=input("bold: 1=yes,2=no\n")
   colored=colortext(text,put)
   if (bold=="1"):
     colored=boldtext(colored)
