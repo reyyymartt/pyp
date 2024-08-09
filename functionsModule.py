@@ -126,6 +126,16 @@ def list_of_functions(args):
     
   finishProduct=tabulate(table,headers=['Command Name', 'Function'], tablefmt='orgtbl')
   print(finishProduct)
+
+def color_text (args):
+  put=input("color: red,green,cyan,magenta")
+  text=input("text: ")
+  bold=input("bold: 1=no,2=yes")
+  colored=colortext(text,color)
+  if (bold=="1"):
+    colored=boldtext(colored)
+  print(colored)
+
   
 functions = {
   "testfunc":{
@@ -152,4 +162,7 @@ functions = {
   "f-list": {
     "function": list_of_functions
   },
+  "colored-t": {
+    "function": color_text
+  }
 }
