@@ -2,13 +2,25 @@
 import functionsModule
 import colorama
 import subprocess
+import pyptools
 
 from functionsModule import functions, searCH
 from colorama import Fore, Back, Style
+from pyptools import *
 
 def ignore(str, args):
   exit()
-
+def runPro(str, args):
+  run=[]
+  if (len(args)>0):
+    for x in range(1,len(args)):
+      run.append(x)
+    subprocess.run(run)
+  else:
+    colored=colortext("missing arguments")
+    bold=boldtext(colored)
+    print(bold)
+  
 def executeFunction (str, args):
   if (len(args)>1):
     check=(args[1] in functions) or False
