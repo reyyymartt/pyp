@@ -1,6 +1,7 @@
 
 import functionsModule
 import colorama
+import subprocess
 
 from functionsModule import functions, searCH
 from colorama import Fore, Back, Style
