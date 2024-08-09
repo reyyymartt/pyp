@@ -14,7 +14,7 @@ def runPro(str, args):
   run=[]
   if (len(args)>0):
     for x in range(1,len(args)):
-      run.append(x)
+      run.append(args[x])
     print(run)
     subprocess.run(run)
   else:
