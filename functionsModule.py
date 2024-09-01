@@ -141,7 +141,7 @@ def getUserInfo (args):
   iD = input('Roblox id: ')
   x = requests.get("https://users.roblox.com/v1/users/"+iD)
   for i in x.json():
-    print(colortext(i,"magenta")+": "+x.json()[i])
+    print(colortext(i,"magenta")+": "+"{0}".format(x.json[i]))
   
 functions = {
   "testfunc":{
