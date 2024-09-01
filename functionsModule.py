@@ -11,6 +11,7 @@ import os
 import tabulate
 import re
 import pyptools
+import subprocess
 
 dbName = 'data.json'
 from pyptools import *
@@ -136,6 +137,11 @@ def color_text (args):
     colored=boldtext(colored)
   print(colored)
 
+def getUserInfo (args):
+  iD = input('Roblox id: ')
+  x = requests.get("https://users.roblox.com/v1/users/"+iD)
+  for i in x.json():
+    print(i,x.json()[i])
   
 functions = {
   "testfunc":{
@@ -164,5 +170,8 @@ functions = {
   },
   "colored-t": {
     "function": color_text
+  },
+  "roblox_user_info":{
+    "function": getUserInfo
   }
 }
