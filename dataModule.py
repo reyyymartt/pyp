@@ -15,7 +15,6 @@ def runPro(str, args):
   if (len(args)>0):
     for x in range(1,len(args)):
       run.append(args[x])
-    print(run)
     subprocess.run(run)
   else:
     colored=colortext("missing arguments")
