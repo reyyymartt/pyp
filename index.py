@@ -33,7 +33,7 @@ decision={
 }
 def input_():
   updateUser()
-  inp = input(Fore.YELLOW+config["user"]+Fore.GREEN+'/ '+Style.RESET_ALL)
+  inp = input(Fore.YELLOW+config["user"]+Fore.GREEN+' ~ '+Style.RESET_ALL)
   split = inp.split(" ")
   args=[]
   check=(split[0] in command_functions) or False
