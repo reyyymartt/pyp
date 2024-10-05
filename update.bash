@@ -14,7 +14,6 @@ echo -e "${yellow}System updated!${nc}"
 cd pyp
 ls
 bash start.bash
-exit 
 
 
 
