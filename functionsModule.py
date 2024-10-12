@@ -1,5 +1,3 @@
-
-
 import time
 import sys
 import phonenumbers
@@ -145,7 +143,8 @@ def getUserInfo (args):
   
 functions = {
   "testfunc":{
-    "function": Func1
+    "function": Func1,
+    "des": "This is the first function for test"
   },
   "numberinfo":{
     "function": numberInfo
