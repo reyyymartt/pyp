@@ -34,7 +34,9 @@ def executeFunction (str, args):
       search=searCH(table,args[1])
       if (len(search)>0):
         for a in search:
-          print("Did you mean "+Fore.YELLOW+a+Style.RESET_ALL+"?")
+          text = colortext(a,green)
+          bd=boldtext(text)
+          print("Did you mean "+bd)
 
 command_functions={
   "exit": ignore,
