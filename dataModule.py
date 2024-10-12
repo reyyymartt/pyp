@@ -34,7 +34,7 @@ def executeFunction (str, args):
       search=searCH(table,args[1])
       if (len(search)>0):
         for a in search:
-          text = colortext(a,green)
+          text = colortext(a,"green")
           bd=boldtext(text)
           print("Did you mean "+bd)
 
