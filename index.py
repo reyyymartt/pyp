@@ -6,10 +6,12 @@ import phonenumbers
 import functionsModule
 import dataModule
 import colorama
+import pyptools
 
 from colorama import Fore, Back, Style
 from functionsModule import functions
 from dataModule import command_functions
+from pyptools import *
 
 config={
   "user": "admin",
@@ -33,7 +35,7 @@ decision={
 }
 def input_():
   updateUser()
-  inp = input(Fore.YELLOW+config["user"]+Fore.GREEN+' ~ '+Style.RESET_ALL)
+  inp = input(colortext(config.user,"yellow")+colortext(" ~ ","green"))
   split = inp.split(" ")
   args=[]
   check=(split[0] in command_functions) or False
