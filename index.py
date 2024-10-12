@@ -35,7 +35,7 @@ decision={
 }
 def input_():
   updateUser()
-  inp = input(colortext(config.user,"yellow")+colortext(" ~ ","green"))
+  inp = input(colortext(config["user"],"yellow")+colortext(" ~ ","green"))
   split = inp.split(" ")
   args=[]
   check=(split[0] in command_functions) or False
