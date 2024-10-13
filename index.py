@@ -6,11 +6,12 @@ import phonenumbers
 import functionsModule
 import dataModule
 import colorama
-import pyptools as *
+import pyptools
 
 from colorama import Fore, Back, Style
 from functionsModule import functions
 from dataModule import command_functions
+from pyptools import *
 
 config={
   "user": "admin",
