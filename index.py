@@ -1,5 +1,3 @@
-
-
 import json
 import time, sys
 import phonenumbers
@@ -9,7 +7,6 @@ import colorama
 import pyptools
 
 from colorama import Fore, Back, Style
-from functionsModule import functions
 from dataModule import command_functions
 from pyptools import *
 
