@@ -6,12 +6,11 @@ import phonenumbers
 import functionsModule
 import dataModule
 import colorama
-import pyptools
+import pyptools as *
 
 from colorama import Fore, Back, Style
 from functionsModule import functions
 from dataModule import command_functions
-from pyptools import *
 
 config={
   "user": "admin",
@@ -19,7 +18,7 @@ config={
 }
 
 def updateUser():
-  with open(config["dbName"], 'r') as file:
+  with open("data.json", 'r') as file:
     data=json.load(file)
     config["user"] = data["Author"]
 
