@@ -15,7 +15,6 @@ dbName = 'data.json'
 from pyptools import *
 from colorama import Fore, Back, Style
 from phonenumbers import timezone,geocoder,carrier
-from pywifi import PyWiFi, const, Profile
 from tabulate import tabulate
 
 def Func1(args):
