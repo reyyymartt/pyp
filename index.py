@@ -20,6 +20,7 @@ config={
 
 def updateUser():
   with open("data.json", 'r') as file:
+    file.seek(0)
     data=json.load(file)
     config["user"] = data["Author"]
     print(data)
