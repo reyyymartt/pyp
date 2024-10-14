@@ -143,7 +143,7 @@ def getUserInfo (args):
 def readcontent(args):
   ans = input("Enter file name: ")
   with open(ans, "r") as file:
-    print(file)
+    print(file.read())
 
   
 functions = {
