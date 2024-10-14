@@ -140,7 +140,7 @@ def getUserInfo (args):
   for i in x.json():
     print(colortext(i,"green")+": "+str(x.json()[i]))
     
-def readcontent():
+def readcontent(args):
   ans = input("Enter file name: ")
   with open(ans, "r") as file:
     print(file)
