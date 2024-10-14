@@ -139,6 +139,12 @@ def getUserInfo (args):
   x = requests.get("https://users.roblox.com/v1/users/"+iD)
   for i in x.json():
     print(colortext(i,"green")+": "+str(x.json()[i]))
+    
+def readcontent():
+  ans = input("Enter file name: ")
+  with open(ans, "r") as file:
+    print(file)
+
   
 functions = {
   "testfunc":{
@@ -171,5 +177,8 @@ functions = {
   },
   "roblox_user_info":{
     "function": getUserInfo
+  },
+  "view_content":{
+    "function": readcontent
   }
 }
