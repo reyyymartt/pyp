@@ -67,6 +67,7 @@ def viewData (args):
 def viewAuthor (args):
   with open(dbName, 'r') as f:
     data = json.load(f)
+    file.close()
     return data["Author"]
     
 def showauthor (args):
