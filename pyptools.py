@@ -29,4 +29,8 @@ def log (text):
 	with open('data.json','r+') as file:
 		data=json.load(file)
 		loglist=data["Logs"]
+		loglist.append(text)
+		file.seek(0)
+		json.dump(data, file, indent=4)
+		file.truncate
 		
