@@ -150,13 +150,21 @@ def readcontent(args):
   ans = input("Enter file name: ")
   with open(ans, "r") as file:
     print(file.read())
-
+    
+def viewlogs (args):
+  with open("data.json", "r") as file:
+    data=json.load(file)
+    print(data["Logs"]
   
 functions = {
   "testfunc":{
     "function": Func1,
     "des": "This is the first function for test"
   },
+  "viewlogs":{
+    "function": viewlogs,
+    "des": "View system logs"
+  }
   "numberinfo":{
     "function": numberInfo
   },
