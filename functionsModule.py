@@ -156,8 +156,9 @@ def viewlogs (args):
     data=json.load(file)
     count=1
     for x in data["Logs"]:
-      text=f"{colortext(f"{count}","magenta")}. {x}"
+      text=f"{colortext(f"{count}","magenta")} - {x}"
       print(text)
+      count+=1
   
 functions = {
   "testfunc":{
