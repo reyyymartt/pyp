@@ -29,10 +29,10 @@ def boldtext(text):
 def log (text):
 	date = datetime.datetime.now()
 	with open('data.json','r+') as file:
+		file.seek(0)
 		data=json.load(file)
 		loglist=data["Logs"]
 		loglist.append({"logdate":f"{date}","logtext":text})
-		file.seek(0)
 		json.dump(data, file, indent=4)
 		file.truncate
 		
