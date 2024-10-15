@@ -26,6 +26,7 @@ def executeFunction (str, args):
     check=(args[1] in functions) or False
     if (check==True):
       functions[args[1]]["function"](args)
+      text = f""
     else:
       print("no function called {"+Fore.RED+args[1]+Style.RESET_ALL+'}')
       table=[]
