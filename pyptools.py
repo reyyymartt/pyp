@@ -6,6 +6,7 @@ import phonenumbers
 import functionsModule
 import colorama
 import fontstyle
+import datetime
 
 from colorama import Fore, Back, Style
 
@@ -26,10 +27,11 @@ def boldtext(text):
 	return fontstyle.apply(text, 'bold')
 
 def log (text):
+	date = datetime.datetime.now()
 	with open('data.json','r+') as file:
 		data=json.load(file)
 		loglist=data["Logs"]
-		loglist.append(text)
+		loglist.append({logdate:date,logtext:text})
 		file.seek(0)
 		json.dump(data, file, indent=4)
 		file.truncate
