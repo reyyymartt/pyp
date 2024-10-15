@@ -24,3 +24,8 @@ def colortext(text, color):
 		
 def boldtext(text):
 	return fontstyle.apply(text, 'bold')
+
+def log (text):
+	with open('data.json','r+') as file:
+		data=json.load(file)
+		loglist=data["Logs"]
