@@ -154,7 +154,7 @@ def readcontent(args):
 def viewlogs (args):
   with open("data.json", "r") as file:
     data=json.load(file)
-    print(data["Logs"]
+    print(data["Logs"])
   
 functions = {
   "testfunc":{
