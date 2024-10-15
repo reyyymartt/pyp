@@ -3,7 +3,6 @@
 import json
 import time, sys
 import phonenumbers
-import functionsModule
 import colorama
 import fontstyle
 import datetime
