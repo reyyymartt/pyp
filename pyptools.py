@@ -29,3 +29,4 @@ def log (text):
 	with open('data.json','r+') as file:
 		data=json.load(file)
 		loglist=data["Logs"]
+		
