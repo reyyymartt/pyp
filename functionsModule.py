@@ -48,7 +48,6 @@ def searCH(table,str):
 
 def viewData (args):
   check = (len(args)>=2) or False
-  cauthor=viewAuthor({})
   answer=input("New author: ")
   if (answer!=""):
     with open(dbName, 'r+') as file:
@@ -58,7 +57,7 @@ def viewData (args):
       json.dump(data, file, indent=4)
       file.truncate
       print(data["Author"])
-      log(f"username changed from {cauthor} to {data["Author"]}")
+      log(f"username changed to {data["Author"]}")
   else:
       print(colortext("Missing argument 1","red"))
     
