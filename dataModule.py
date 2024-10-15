@@ -4,7 +4,7 @@ import colorama
 import subprocess
 import pyptools
 
-from functionsModule import functions, searCH
+from functionsModule import functions, searCH, viewAuthor
 from colorama import Fore, Back, Style
 from pyptools import *
 
@@ -22,11 +22,13 @@ def runPro(str, args):
     print(bold)
   
 def executeFunction (str, args):
+  user=viewAuthor({})
   if (len(args)>1):
     check=(args[1] in functions) or False
     if (check==True):
       functions[args[1]]["function"](args)
-      text = f""
+      text = f"{user} has called the function {args[1]}"
+      log(text)
     else:
       print("no function called {"+Fore.RED+args[1]+Style.RESET_ALL+'}')
       table=[]
