@@ -63,7 +63,13 @@ def viewData (args):
 def viewAuthor (args):
   with open(dbName, 'r') as f:
     data = json.load(f)
-    print(data["Author"])
+    return data["Author"]
+    
+def showauthor (args):
+  get=viewAuthor({})
+  text=f"Current user: {colortext(get,"yellow")}"
+  print(text)
+
 
 def get_ip_info(ip_address):
     url = f"http://ipinfo.io/{ip_address}/json"
@@ -158,7 +164,7 @@ functions = {
     "function": viewData
   },
   "v-author": {
-    "function": viewAuthor
+    "function": showauthor
   },
   "get_ip_info": {
     "function": main
