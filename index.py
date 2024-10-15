@@ -20,6 +20,7 @@ def updateUser():
     file.seek(0)
     data=json.load(file)
     config["user"] = data["Author"]
+    file.close()
 
 def function(str, args):
   command_functions[str](str, args)
