@@ -154,7 +154,10 @@ def readcontent(args):
 def viewlogs (args):
   with open("data.json", "r") as file:
     data=json.load(file)
-    print(data["Logs"])
+    count=1
+    for x in data["Logs"]:
+      text=f"{colortext(f"{count}","magenta")}. {x}"
+      print(text)
   
 functions = {
   "testfunc":{
