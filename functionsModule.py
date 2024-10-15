@@ -164,7 +164,7 @@ functions = {
   "viewlogs":{
     "function": viewlogs,
     "des": "View system logs"
-  }
+  },
   "numberinfo":{
     "function": numberInfo
   },
