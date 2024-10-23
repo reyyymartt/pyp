@@ -62,7 +62,7 @@ def viewData (args):
       file.truncate
       print(data["Author"])
       file.close()
-      log(f"username changed from {prevUser} to {newuser}")
+      log(f"username changed from {colortext(prevUser,"yellow")} to {colortext(newuser,"green")}")
   else:
       print(colortext("Missing argument 1","red"))
     
