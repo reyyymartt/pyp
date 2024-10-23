@@ -27,7 +27,7 @@ def executeFunction (str, args):
     check=(args[1] in functions) or False
     if (check==True):
       functions[args[1]]["function"](args)
-      text = f"{colortext(user,"yellow")} has called the function {args[1]} \n with arguments:{args}"
+      text = f"{colortext(user,"magenta")} has called the function {args[1]}"
       log(text)
     else:
       print("no function called {"+Fore.RED+args[1]+Style.RESET_ALL+'}')
