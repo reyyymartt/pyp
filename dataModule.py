@@ -9,6 +9,8 @@ from colorama import Fore, Back, Style
 from pyptools import *
 
 def ignore(str, args):
+  user=viewAuthor({})
+  print(f"logged out as {user}")
   exit()
 def runPro(str, args):
   run=[]
