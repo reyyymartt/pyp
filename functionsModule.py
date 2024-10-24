@@ -177,7 +177,7 @@ functions = {
   "test2":{
     "function": test,
     "des": "Test function for functions extension"
-  }
+  },
   "viewlogs":{
     "function": viewlogs,
     "des": "View system logs"
