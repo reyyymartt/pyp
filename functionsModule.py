@@ -10,9 +10,11 @@ import tabulate
 import re
 import pyptools
 import subprocess
+import functionsExtension
 
 dbName = 'data.json'
 from pyptools import *
+from functionsExtension import *
 from colorama import Fore, Back, Style
 from phonenumbers import timezone,geocoder,carrier
 from tabulate import tabulate
@@ -172,6 +174,10 @@ functions = {
     "function": Func1,
     "des": "This is the first function for test"
   },
+  "test2":{
+    "function": test,
+    "des": "Test function for functions extension"
+  }
   "viewlogs":{
     "function": viewlogs,
     "des": "View system logs"
